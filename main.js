@@ -9,3 +9,11 @@ document
   .addEventListener("click", function () {
     document.querySelector("header nav .wrapper").classList.remove("nav-open")
   })
+
+
+const customer = "Sara"
+let balance = 2000
+console.log("Hola, " + customer + ". Your balance is USD " + balance)
+
+balance = balance + 200
+console.log("Hola, " + customer + ". Your new balance is USD " + balance)
