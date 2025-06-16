@@ -10,10 +10,35 @@ document
     document.querySelector("header nav .wrapper").classList.remove("nav-open")
   })
 
-
+// Tipo de dato string
 const customer = "Sara"
 let balance = 2000
-console.log("Hola, " + customer + ". Your balance is USD " + balance)
 
-balance = balance + 200
-console.log("Hola, " + customer + ". Your new balance is USD " + balance)
+let accountNumber = "I456545"
+accountNumber.length // 7 - Se puede usar como validación
+
+accountNumber[0] // N - Validar 
+
+accountNumber.slice(0,2) // Dos primeros caracteres
+
+accountNumber = "PT_456545"
+
+accountNumber.replace = ("_","") // PT456545 - Reemplaza
+
+accountNumber = accountNumber.replace = ("_","") // Actualiza con el replace
+
+// Tipo de dato número
+
+let price = 17.55
+typeof price // 'number'
+
+let discount = 2
+
+let finalPrice = price - discount
+
+finalPrice //15.55
+
+Math.round(price) // 18 - redondea hacia arriba o abajo según el decima
+Math.floor(price) // 17 - redondea hacia abajo
+Math.ceil(price) // 18 - furza redondeo hacia arriba
+price.toFixed(2) // redondea decimal
