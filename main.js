@@ -46,3 +46,8 @@ document
       document.querySelector("p#weather").innerHTML = fahrText
     }
   })
+
+// Fecha y hora
+// new Date().getHours()
+// new Date().getMinutes()
+// new Date().getSeconds()
