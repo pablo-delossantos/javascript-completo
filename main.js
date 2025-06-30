@@ -53,9 +53,9 @@ setInterval(function () {
   let localTime = new Date()
 
   document.querySelector("span[data-time=hours]").textContent =
-    localTime.getHours()
+    localTime.getHours().toString().padStart(2,"0")
   document.querySelector("span[data-time=minutes]").textContent =
-    localTime.getMinutes()
+    localTime.getMinutes().toString().padStart(2,"0")
   document.querySelector("span[data-time=seconds]").textContent =
-    localTime.getSeconds()
+    localTime.getSeconds().toString().padStart(2,"0")
 }, 1000)
