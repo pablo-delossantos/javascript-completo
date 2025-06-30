@@ -19,10 +19,20 @@ function celsiusToFahr(temperature) {
   return fahr
 }
 
-celsiusToFahr(25)
-celsiusToFahr(30)
+let currentHour = new Date().getHours()
 
-const greetingText = "Good afternoon!"
+let greetingText
+
+if (currentHour < 12) {
+  greetingText = "Good morning!"
+} else if (currentHour < 19) {
+  greetingText = "Good afternoon!"
+} else if (currentHour < 24) {
+  greetingText = "Good evening!"
+} else {
+  greetingText = "Welcome!"
+}
+
 const weatherCondition = "Sunny"
 const userLocation = "Rio de Janeiro"
 let temperature = 30
