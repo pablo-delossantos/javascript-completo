@@ -179,20 +179,26 @@ function galleryHandler() {
   </div>
 </div> */
 
-function productsHandlrer() {
-  let productsSection = document.querySelector("product-area")
-
+function productsHandler() {
+  let productsSection = document.querySelector(".products-area")
+  
+  // Ejecutar un bucle a través de los productos y crear un elemento HTML (product-item) para cada uno de ellos
   products.forEach(function (product, index) {
+    
+    // Crear un elemnto HTML por cada producto individual
     let productElm = document.createElement("div")
     productElm.classList.add("product-item")
 
+    // Crear la imagen del producto
     let productImage = document.createElement("img")
-    productImage.scr = product.image
-    productImage.alt = "Image for" + product.title
+    productImage.src = product.image
+    productImage.alt = "Image for " + product.title
 
+    // Todos los hijos HTML del producto
     productElm.append(productImage)
     
-    productSection()
+    // Agregamos todos los productos individuales a la seccion de productos
+    productsSection.append(productElm)
   })
 }
 
@@ -201,4 +207,4 @@ menuHandler()
 greetingHandler()
 clockHandler()
 galleryHandler()
-productsHandlrer()
+productsHandler()
