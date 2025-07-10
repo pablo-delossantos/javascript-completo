@@ -170,14 +170,14 @@ function galleryHandler() {
 // Products section
 
 /* <div class="product-item">
-  <img src="./assets/products/img6.png" alt="AstroFiction" />
-  <div class="product-details">
-    <h3 class="product-title">AstroFiction</h3>
-    <p class="product-author">John Doe</p>
-    <p class="price-title">Price</p>
-    <p class="product-price">$ 49.90</p>
-  </div>
-</div> */
+    <img src="./assets/products/img6.png" alt="AstroFiction" />
+    <div class="product-details">
+      <h3 class="product-title">AstroFiction</h3>
+      <p class="product-author">John Doe</p>
+      <p class="price-title">Price</p>
+      <p class="product-price">$ 49.90</p>
+    </div>
+  </div> */
 
 function productsHandler() {
   let productsSection = document.querySelector(".products-area")
@@ -194,8 +194,22 @@ function productsHandler() {
     productImage.src = product.image
     productImage.alt = "Image for " + product.title
 
+    // Crear el título del producto, autor, titulo precio y precio
+    let productTitle = document.createElement("h3")
+    productTitle.classList.add("product-title")
+    productTitle.textContent = product.title
+
+    
+    // Crear la sección detalles del producto
+    let productDetails = document.createElement("div")
+    productDetails.classList.add("product-details")
+    
+    // Añadir detalles del producto
+    productDetails.append(productTitle)
+    
     // Todos los hijos HTML del producto
     productElm.append(productImage)
+    productElm.append(productDetails)
     
     // Agregamos todos los productos individuales a la seccion de productos
     productsSection.append(productElm)
