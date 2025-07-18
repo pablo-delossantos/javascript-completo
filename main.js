@@ -192,20 +192,36 @@ function productsHandler() {
     let productImage = document.createElement("img")
     productImage.src = product.image
     productImage.alt = "Image for " + product.title
+    
+    // Crear la sección detalles del producto
+    let productDetails = document.createElement("div")
+    productDetails.classList.add("product-details")
 
     // Crear el título del producto, autor, titulo precio y precio
     let productTitle = document.createElement("h3")
     productTitle.classList.add("product-title")
     productTitle.textContent = product.title
+    
+    let productAuthor = document.createElement("p")
+    productAuthor.classList.add("product-author")
+    productAuthor.textContent = product.author
+    
+    let priceTitle = document.createElement("p")
+    priceTitle.classList.add("price-title")
+    priceTitle.textContent = "Price"
+    
+    let productPrice = document.createElement("p")
+    productPrice.classList.add("product-price")
+    productPrice.textContent =product.price > 0 ? "$" + product.price.toFixed(2) :"Free"
+    
 
-    
-    // Crear la sección detalles del producto
-    let productDetails = document.createElement("div")
-    productDetails.classList.add("product-details")
-    
     // Añadir detalles del producto
     productDetails.append(productTitle)
+    productDetails.append(productAuthor)
+    productDetails.append(priceTitle)
+    productDetails.append(productPrice)
     
+
     // Todos los hijos HTML del producto
     productElm.append(productImage)
     productElm.append(productDetails)
