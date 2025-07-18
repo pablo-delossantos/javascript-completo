@@ -181,10 +181,9 @@ function galleryHandler() {
 
 function productsHandler() {
   let productsSection = document.querySelector(".products-area")
-  
+
   // Ejecutar un bucle a través de los productos y crear un elemento HTML (product-item) para cada uno de ellos
   products.forEach(function (product, index) {
-    
     // Crear un elemnto HTML por cada producto individual
     let productElm = document.createElement("div")
     productElm.classList.add("product-item")
@@ -194,9 +193,22 @@ function productsHandler() {
     productImage.src = product.image
     productImage.alt = "Image for " + product.title
 
+    // Crear la sección detalles del producto
+    let productDetail = document.createElement("div")
+    productDetail.classList.add("product-details")
+
+    // Crear titulo del producto, autor, precio
+    let productTitle = document.createElement("h3")
+    productTitle.classList.add("product-title")
+    productTitle.textContent = product.title
+
+    // Añadir detalles del producto
+    productDetail.append(productTitle)
+
     // Todos los hijos HTML del producto
     productElm.append(productImage)
-    
+    productElm.append(productDetail)
+
     // Agregamos todos los productos individuales a la seccion de productos
     productsSection.append(productElm)
   })
