@@ -170,14 +170,14 @@ function galleryHandler() {
 // Products section
 
 /* <div class="product-item">
-  <img src="./assets/products/img6.png" alt="AstroFiction" />
-  <div class="product-details">
-    <h3 class="product-title">AstroFiction</h3>
-    <p class="product-author">John Doe</p>
-    <p class="price-title">Price</p>
-    <p class="product-price">$ 49.90</p>
-  </div>
-</div> */
+    <img src="./assets/products/img6.png" alt="AstroFiction" />
+    <div class="product-details">
+      <h3 class="product-title">AstroFiction</h3>
+      <p class="product-author">John Doe</p>
+      <p class="price-title">Price</p>
+      <p class="product-price">$ 49.90</p>
+    </div>
+  </div> */
 
 function productsHandler() {
   let productsSection = document.querySelector(".products-area")
@@ -193,15 +193,20 @@ function productsHandler() {
     productImage.src = product.image
     productImage.alt = "Image for " + product.title
 
+<<<<<<< HEAD
     // Crear la sección detalles del producto
     let productDetail = document.createElement("div")
     productDetail.classList.add("product-details")
 
     // Crear titulo del producto, autor, precio
+=======
+    // Crear el título del producto, autor, titulo precio y precio
+>>>>>>> eb253e4fce3e953ed1e2ff27cd78be53fe7ac71b
     let productTitle = document.createElement("h3")
     productTitle.classList.add("product-title")
     productTitle.textContent = product.title
 
+<<<<<<< HEAD
     // Añadir detalles del producto
     productDetail.append(productTitle)
 
@@ -209,6 +214,20 @@ function productsHandler() {
     productElm.append(productImage)
     productElm.append(productDetail)
 
+=======
+    
+    // Crear la sección detalles del producto
+    let productDetails = document.createElement("div")
+    productDetails.classList.add("product-details")
+    
+    // Añadir detalles del producto
+    productDetails.append(productTitle)
+    
+    // Todos los hijos HTML del producto
+    productElm.append(productImage)
+    productElm.append(productDetails)
+    
+>>>>>>> eb253e4fce3e953ed1e2ff27cd78be53fe7ac71b
     // Agregamos todos los productos individuales a la seccion de productos
     productsSection.append(productElm)
   })
