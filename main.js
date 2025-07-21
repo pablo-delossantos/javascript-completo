@@ -169,16 +169,6 @@ function galleryHandler() {
 
 // Products section
 
-/* <div class="product-item">
-    <img src="./assets/products/img6.png" alt="AstroFiction" />
-    <div class="product-details">
-      <h3 class="product-title">AstroFiction</h3>
-      <p class="product-author">John Doe</p>
-      <p class="price-title">Price</p>
-      <p class="product-price">$ 49.90</p>
-    </div>
-  </div> */
-
 function productsHandler() {
   let productsSection = document.querySelector(".products-area")
 
@@ -213,14 +203,12 @@ function productsHandler() {
     let productPrice = document.createElement("p")
     productPrice.classList.add("product-price")
     productPrice.textContent =product.price > 0 ? "$" + product.price.toFixed(2) :"Free"
-    
 
     // Añadir detalles del producto
     productDetails.append(productTitle)
     productDetails.append(productAuthor)
     productDetails.append(priceTitle)
     productDetails.append(productPrice)
-    
 
     // Todos los hijos HTML del producto
     productElm.append(productImage)
@@ -229,7 +217,13 @@ function productsHandler() {
     // Agregamos todos los productos individuales a la seccion de productos
     productsSection.append(productElm)
   })
+
+  let totalProduct = products.length
+  document.querySelector(".products-filter label[for=all] span.product-amount").textContent = totalProduct
+
 }
+
+
 
 // Page load
 menuHandler()
